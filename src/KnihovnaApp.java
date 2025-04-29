@@ -109,10 +109,17 @@ public class KnihovnaApp {
         }
 
         //FANTASY ANO/NE
+        boolean fantasyAnoNe = false;
         for (Roman r : romany) {
             String zanr = r.getZanr().toLowerCase();
             if (zanr.equals("fantasy")) {
-                System.out.println("Kniha s žýánrem fantadsy existuje");
+                fantasyAnoNe = true;
+
+            }
+            if(fantasyAnoNe){
+                System.out.println("Kniha s žánrem fantasy existuje");
+            }else{
+                System.out.println("Kniha s žánrem fantasy neexistuje");
             }
         }
 
