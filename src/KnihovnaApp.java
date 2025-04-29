@@ -81,6 +81,41 @@ public class KnihovnaApp {
         }
         System.out.println("Knihy mají celkově " +celkovyPocetStran+ " stran");
 
+        //JMÉNA AUTORŮ MATEMATICKÝCH
+        System.out.println("Autoři s matematickýmu učebnicemi jsou:");
+
+        for (Ucebnice u : ucebnice) {
+            String zanr = u.getPredmet().toLowerCase();
+
+            if (zanr.equals("matematika")) {
+                System.out.println(u.getAutor());
+            }
+        }
+
+        //JMÉNO AUTORA NEJDELŠÍHO ROMÁNU
+        Roman nejdelsi = null;
+
+        for (Roman r : romany) {
+
+            if (nejdelsi == null || r.getPocetStran() > nejdelsi.getPocetStran()) {
+                nejdelsi = r;
+            }
+        }
+
+        if (nejdelsi != null) {
+            System.out.println("Autor s nejstarším románem je: " + nejdelsi.getAutor());
+        } else {
+            System.out.println("Žádný román v knihovně není");
+        }
+
+        //FANTASY ANO/NE
+        for (Roman r : romany) {
+            String zanr = r.getZanr().toLowerCase();
+            if (zanr.equals("fantasy")) {
+                System.out.println("Kniha s žýánrem fantadsy existuje");
+            }
+        }
+
 
 
 
