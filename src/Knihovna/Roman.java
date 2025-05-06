@@ -22,3 +22,5 @@ public class Roman extends Publikace{
         return zanr;
     }
 }
+
+
